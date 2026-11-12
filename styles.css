@@ -2359,7 +2359,7 @@ body.nav-active .expanded-links a {
 @media (max-width: 900px) { .pg-header-links { display: none; } }
 
 .legal { padding: 5rem 0 6rem; }
-.legal-inner { max-width: 820px; }
+.legal-inner > * { max-width: 820px; }
 .legal .mono-tag { margin-bottom: 1rem; }
 .legal-updated { font-size: 0.85rem; color: #6e6e73; margin: 0 0 1.5rem; }
 .legal-lead { font-size: 1.1rem; line-height: 1.65; color: #3a3a3c; margin: 0 0 2.5rem; }
