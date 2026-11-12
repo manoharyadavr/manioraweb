@@ -2410,3 +2410,8 @@ body.nav-active .expanded-links a {
 /* Secondary pages: clear the floating nav island */
 .legal, .pg-hero { padding-top: 8.5rem; }
 @media (max-width: 720px) { .legal, .pg-hero { padding-top: 7rem; } }
+
+.price-was { font-size: 1.1rem; color: #86868b; text-decoration: line-through; margin-right: 0.35rem; }
+.price-offer { font-size: 0.82rem; line-height: 1.5; color: #6e6e73; margin: 0.8rem 0 0; }
+.price-offer { margin: 0.9rem 0 1.2rem; }
+.price-card--hot .price-offer { color: rgba(255,255,255,0.78); }
