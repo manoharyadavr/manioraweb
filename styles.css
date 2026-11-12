@@ -2351,12 +2351,12 @@ body.nav-active .expanded-links a {
 .pg-header { position: sticky; top: 0; z-index: 100; background: rgba(250,249,246,0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border-light); }
 .pg-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 0.8rem; padding-bottom: 0.8rem; }
 .pg-header .nav-logo-img { height: 30px; width: auto; display: block; }
-.pg-header-links { display: flex; gap: 1.8rem; margin-left: auto; margin-right: 1rem; }
-.pg-header-links a { color: var(--color-text-dark); text-decoration: none; font-size: 0.92rem; font-weight: 500; opacity: 0.8; }
+.pg-header-links { display: flex; gap: 1.8rem; margin: 0 1.2rem 0 auto; }
+.pg-header-links a { color: var(--color-text-dark); text-decoration: none; font-size: 0.92rem; font-weight: 500; opacity: 0.8; white-space: nowrap; }
 .pg-header-links a:hover { opacity: 1; }
 .pg-wa-btn { display: inline-flex; align-items: center; gap: 0.45rem; background: var(--color-text-dark); color: var(--color-bg-light); padding: 0.55rem 1.15rem; border-radius: 100px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: background-color 200ms ease; white-space: nowrap; }
 .pg-wa-btn:hover { background: var(--color-accent); color: #fff; }
-@media (max-width: 720px) { .pg-header-links { display: none; } }
+@media (max-width: 900px) { .pg-header-links { display: none; } }
 
 .legal { padding: 5rem 0 6rem; }
 .legal-inner { max-width: 820px; }
