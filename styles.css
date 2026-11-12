@@ -2415,3 +2415,12 @@ body.nav-active .expanded-links a {
 .price-offer { font-size: 0.82rem; line-height: 1.5; color: #6e6e73; margin: 0.8rem 0 0; }
 .price-offer { margin: 0.9rem 0 1.2rem; }
 .price-card--hot .price-offer { color: rgba(255,255,255,0.78); }
+
+/* Trust strip */
+.trust-strip { background: #fff; border-top: 1px solid var(--color-border-light); padding: 4.5rem 0 4rem; }
+.trust-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.trust-grid li { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.4rem 1.4rem 1.5rem; border: 1px solid var(--color-border-light); border-radius: 1.1rem; background: var(--color-bg-light); }
+.trust-grid strong { font-size: 1.05rem; font-weight: 600; color: #1d1d1f; letter-spacing: -0.01em; }
+.trust-grid span { font-size: 0.92rem; line-height: 1.55; color: #6e6e73; }
+@media (max-width: 960px) { .trust-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .trust-strip { padding: 3.5rem 0 3rem; } .trust-grid { grid-template-columns: 1fr; } }
