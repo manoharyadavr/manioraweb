@@ -2406,3 +2406,7 @@ body.nav-active .expanded-links a {
 .pg-cta { background: #fff; padding: 6rem 0; }
 @media (max-width: 960px) { .pg-hero-grid { grid-template-columns: 1fr; gap: 2.2rem; } .pg-grid, .pg-steps { grid-template-columns: 1fr; } .pg-hero { padding-top: 3rem; } .pg-section { padding: 4rem 0; } }
 @media (max-width: 640px) { .btn-ghost, .pg-cta-row .btn-primary { width: 100%; justify-content: center; } }
+
+/* Secondary pages: clear the floating nav island */
+.legal, .pg-hero { padding-top: 8.5rem; }
+@media (max-width: 720px) { .legal, .pg-hero { padding-top: 7rem; } }
