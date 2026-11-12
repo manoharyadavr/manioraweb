@@ -179,3 +179,14 @@ document.addEventListener('click', (e) => {
         'click_location': el.dataset.waLoc || 'unknown'
     });
 });
+
+// Local preview (double-click / file://): folder links need an explicit index.html
+if (location.protocol === 'file:') {
+    document.querySelectorAll('a[href]').forEach((a) => {
+        const h = a.getAttribute('href');
+        if (!h || /^(https?:|mailto:|tel:)/.test(h)) return;
+        const [path, hash] = h.split('#');
+        if (path === '' ) return;
+        if (path.endsWith('/')) a.setAttribute('href', path + 'index.html' + (hash ? '#' + hash : ''));
+    });
+}
