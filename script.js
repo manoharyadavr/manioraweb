@@ -75,27 +75,23 @@ document.addEventListener('DOMContentLoaded', () => {
             // Gather form data
             const formData = new FormData(alignmentForm);
             const name = formData.get('name') || '';
-            const email = formData.get('email') || '';
+            const phone = formData.get('phone') || '';
             const service = formData.get('service') || '';
             const message = formData.get('message') || '';
 
-            // Format service for display
-            let serviceText = '';
-            if (service === 'new-website') serviceText = 'New Website';
-            else if (service === 'website-redesign') serviceText = 'Website Redesign';
-            else if (service === 'landing-page') serviceText = 'Landing Page';
-            else if (service === 'ecommerce') serviceText = 'E-commerce';
-            else if (service === 'booking-website') serviceText = 'Booking Website';
-            else if (service === 'something-else') serviceText = 'Something Else';
-            else serviceText = service || 'Not specified';
+            // Use the visible option text (e.g. "Starter Website (₹9,999)")
+            const serviceSelect = document.getElementById('form-service');
+            const serviceText = (serviceSelect && serviceSelect.selectedIndex > 0)
+                ? serviceSelect.options[serviceSelect.selectedIndex].text
+                : (service || 'Not specified');
 
             // Construct WhatsApp message body
-            const whatsappMsg = `Hello Maniora Partners,\n\n` +
-                                `I would like to book a strategy call. Here are my details:\n\n` +
+            const whatsappMsg = `Hi Mani,\n\n` +
+                                `I'd like a website for my business. My details:\n\n` +
                                 `• *Name:* ${name}\n` +
-                                `• *Email:* ${email}\n` +
-                                `• *Service Needed:* ${serviceText}\n` +
-                                `• *Project Goals:* ${message}`;
+                                `• *WhatsApp:* ${phone}\n` +
+                                `• *Interested in:* ${serviceText}\n` +
+                                `• *Business / need:* ${message}`;
 
             // Create WhatsApp URL
             const whatsappUrl = `https://wa.me/919640161711?text=${encodeURIComponent(whatsappMsg)}`;
@@ -112,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.dataLayer.push({
                 'event': 'generate_lead',
                 'lead_type': serviceText,
-                'lead_source': 'strategy_form'
+                'lead_source': 'contact_form'
             });
 
             // Set up fallback button URL & click tracking
@@ -168,5 +164,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+    });
+});
+
+// --------------------------------------------------
+// WHATSAPP BUTTON CLICK TRACKING (nav, hero, founder, floating)
+// --------------------------------------------------
+document.addEventListener('click', (e) => {
+    const el = e.target.closest && e.target.closest('.wa-track');
+    if (!el) return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'whatsapp_click',
+        'click_location': el.dataset.waLoc || 'unknown'
     });
 });
