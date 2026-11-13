@@ -2487,3 +2487,14 @@ body.nav-active .expanded-links a {
     #hero .btn-ghost { flex: 1 1 0; }
     #hero .btn-primary .btn-icon { display: none; }
 }
+
+/* Mobile footer: two columns per row */
+@media (max-width: 768px) {
+    .footer-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1.25rem; flex-direction: unset; }
+    .footer-meta .meta-col:nth-child(3):last-child { grid-column: 1 / -1; }
+    .meta-col span:not(.mono-tag), .meta-col p { font-size: 0.86rem !important; line-height: 1.5; }
+    .meta-col { gap: 0.2rem; min-width: 0; }
+    .meta-col .mono-tag { margin-bottom: 0.5rem; }
+    .meta-col a { font-size: 0.86rem; overflow-wrap: anywhere; }
+    .footer-layout { gap: 2.5rem; }
+}
