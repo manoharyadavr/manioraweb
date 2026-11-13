@@ -2448,4 +2448,15 @@ body.nav-active .expanded-links a {
 .ht-day--live { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
 .ht-steps strong { display: block; font-size: 1.02rem; font-weight: 600; color: #1d1d1f; letter-spacing: -0.01em; }
 .ht-steps p { margin: 0.2rem 0 0; font-size: 0.88rem; line-height: 1.5; color: #6e6e73; }
-@media (max-width: 560px) { .hero-timeline { padding: 1.4rem 1.2rem 1.1rem; } .ht-head { flex-direction: column; align-items: flex-start; } .ht-steps::before { left: 29px; } .ht-day { width: 58px; font-size: 0.68rem; } }
+@media (max-width: 560px) { .hero-timeline { padding: 1.4rem 1.2rem 1.1rem; } .ht-head { flex-direction: column; align-items: flex-start; } .ht-steps::before { left: 29px; } .ht-day { width: 62px; font-size: 0.72rem; } }
+
+/* Mobile polish: readable text and comfortable tap targets */
+.nav-toggle { box-sizing: content-box; padding: 15px 11px; margin-right: -11px; }
+@media (max-width: 768px) {
+    [style*="font-size: 0.68rem"], [style*="font-size: 0.7rem"], [style*="font-size: 0.72rem"], .metric-badge, .font-mono { font-size: max(0.75rem, 12px) !important; }
+    .mono-tag { font-size: max(0.75rem, 12px); }
+    main p a[href], .price-note a { display: inline-block; padding: 0.55rem 0; margin: -0.55rem 0; }
+    footer a { display: inline-block; padding: 0.5rem 0; }
+    .wa-track { min-height: 44px; }
+    .price-delivery, .price-badge { font-size: 0.75rem; }
+}
