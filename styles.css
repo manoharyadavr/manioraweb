@@ -2553,3 +2553,11 @@ body.nav-active .expanded-links a {
     .ht-day { background: var(--color-bg-light); }
     .ht-day--live { background: var(--color-accent); }
 }
+
+/* Footer location line: match the other footer items */
+.meta-col > span:not(.mono-tag) { color: var(--color-text-light); opacity: 0.55 !important; font-size: 0.88rem; }
+
+/* Floating WhatsApp button (shared by all pages) */
+.wa-float { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 999; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.18); transition: transform 0.2s ease; }
+.wa-float:hover { transform: scale(1.06); }
+@media (max-width: 768px) { .wa-float { width: 52px; height: 52px; right: 14px; bottom: 14px; } }
