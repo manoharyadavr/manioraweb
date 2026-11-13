@@ -2512,3 +2512,12 @@ body.nav-active .expanded-links a {
     .footer-bottom { padding-top: 1.25rem; gap: 0.5rem; }
     .footer-bottom span { line-height: 1.4; }
 }
+
+/* Mobile testimonials: swipeable row, cards side by side */
+@media (max-width: 640px) {
+    #testimonials { padding: 4.5rem 0 4rem !important; }
+    .testimonial-row { display: flex !important; flex-wrap: nowrap; gap: 0.9rem !important; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; margin: 0 -1.5rem; padding: 0.25rem 1.5rem 1rem; scroll-padding: 0 1.5rem; scrollbar-width: none; }
+    .testimonial-row::-webkit-scrollbar { display: none; }
+    .testimonial-row > figure { flex: 0 0 82%; scroll-snap-align: start; padding: 1.4rem !important; gap: 1.2rem !important; }
+    .testimonial-row blockquote { font-size: 1.02rem !important; line-height: 1.5 !important; }
+}
