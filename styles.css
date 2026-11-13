@@ -2561,3 +2561,14 @@ body.nav-active .expanded-links a {
 .wa-float { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 999; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.18); transition: transform 0.2s ease; }
 .wa-float:hover { transform: scale(1.06); }
 @media (max-width: 768px) { .wa-float { width: 52px; height: 52px; right: 14px; bottom: 14px; } }
+
+/* FAQ: tidy accordion */
+.faq-question .q-text { flex: 1 1 auto; min-width: 0; }
+@media (max-width: 768px) {
+    .faq-grid .faq-item { padding: 0.95rem 0; }
+    .faq-question { font-size: 1rem; line-height: 1.35; gap: 0.7rem; align-items: flex-start; }
+    .faq-question .q-tag { font-size: 0.7rem; margin-top: 0.28rem; }
+    .faq-icon-wrap { margin-top: 0.1rem; }
+    .faq-answer-inner { padding: 0.7rem 0 0.1rem 0; font-size: 0.92rem; line-height: 1.6; }
+}
+@media (max-width: 768px) { .faq-grid { gap: 0 !important; } }
