@@ -2536,3 +2536,20 @@ body.nav-active .expanded-links a {
     .ht-steps li:last-child { border-color: rgba(207,41,29,0.3); }
 }
 .hero-grid > *, .hero-meta-block, .hero-timeline { min-width: 0; max-width: 100%; }
+
+/* Mobile timeline v3: flat, full width, 2x2 grid */
+@media (max-width: 768px) {
+    .hero-grid { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (max-width: 640px) {
+    .hero-timeline { background: transparent; border: 0; box-shadow: none; border-radius: 0; padding: 0; overflow: visible; }
+    .ht-head { padding: 0; margin-bottom: 0.9rem; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; }
+    .ht-head .mono-tag { font-size: 0.75rem; letter-spacing: 0.02em; white-space: nowrap; }
+    .ht-live { font-size: 0.72rem; padding: 0.25rem 0.6rem; }
+    .ht-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; overflow: visible; padding: 0; scroll-snap-type: none; }
+    .ht-steps li { flex: none; padding: 0.9rem 0.85rem 1rem; gap: 0.6rem; background: #fff; }
+    .ht-steps strong { font-size: 0.95rem; line-height: 1.25; }
+    .ht-steps p { font-size: 0.82rem; line-height: 1.45; }
+    .ht-day { background: var(--color-bg-light); }
+    .ht-day--live { background: var(--color-accent); }
+}
