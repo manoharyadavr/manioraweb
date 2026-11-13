@@ -2572,3 +2572,15 @@ body.nav-active .expanded-links a {
     .faq-answer-inner { padding: 0.7rem 0 0.1rem 0; font-size: 0.92rem; line-height: 1.6; }
 }
 @media (max-width: 768px) { .faq-grid { gap: 0 !important; } }
+
+/* Mobile: tighter vertical rhythm between sections */
+@media (max-width: 768px) {
+    .editorial-section, .protocol-section, .faq-section, .form-section { padding: 3.25rem 0 3rem 0 !important; }
+    .form-header { margin-bottom: 1.5rem !important; }
+    .form-container { padding: 1.5rem 1.25rem !important; }
+    .form-container .form-instructions { margin-bottom: 1.4rem !important; }
+    .faq-section > .container > .reveal-on-scroll:first-child { margin-bottom: 2rem !important; }
+}
+@media (max-width: 768px) {
+    #pricing, #testimonials, #services { padding-top: 3.25rem !important; padding-bottom: 3rem !important; }
+}
